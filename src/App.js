@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "draft-js/dist/Draft.css";
+import TextEditor from "./components/textEditor";
 
-function App() {
+const homeStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100vh",
+  backgroundColor: "#171717",
+};
+
+const titleStyle = {
+  fontSize: "2rem",
+  fontWeight: "bold",
+  marginBottom: "1rem",
+  color: "white",
+};
+
+export default function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={homeStyle}>
+      <h1 style={titleStyle}>DraftJS Editor</h1>
+      <TextEditor />
     </div>
   );
 }
-
-export default App;
